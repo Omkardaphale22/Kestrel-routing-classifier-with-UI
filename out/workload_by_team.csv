@@ -1,0 +1,8 @@
+final,requests,transfers_on_requests,median_hours_to_resolve,share_pct,requests_per_month,bot_queue_requests,sent_out_misrouted,bot_queue_vs_actual_pct
+Repairs,2534,873,9.2,23.4,169.0,3129,1202,23.0
+Installs & Demo,1596,697,10.0,14.7,106.0,1185,69,-26.0
+Returns & Replacement,1539,644,9.8,14.2,103.0,1174,70,-24.0
+Product Advice,1390,419,9.7,12.8,93.0,1180,78,-15.0
+Warranty Claims,1379,589,9.8,12.7,92.0,1040,65,-25.0
+Billing,1318,386,8.9,12.2,88.0,1656,611,26.0
+Filters & Consumables,1066,294,9.1,9.9,71.0,1458,601,37.0

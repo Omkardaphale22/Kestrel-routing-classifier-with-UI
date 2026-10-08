@@ -1,0 +1,15 @@
+variant,kept_or_dropped,acc_vs_final,acc_vs_bot,acc_at_85pct_coverage,why
+0. always predict the biggest team (Repairs),dropped,0.233,0.289,,floor for scale
+1. the vendor bot as it is today,baseline,0.767,1.0,,what we are replacing
+2. LR trained on the bot's queue (client's brief),dropped,0.757,0.948,0.8,hits 90%+ vs the bot but copies its mistakes; real accuracy ~76%
+"3. LR final team, raw text (no mojibake repair)",dropped,0.837,0.779,0.942,repair is cheap; see delta to row 6
+"4. LR final team, text only",dropped,0.836,0.782,0.945,channel/product/warranty add a little
+5. Complement Naive Bayes,dropped,0.822,0.752,0.94,worse and badly calibrated
+"6. LR final team, word 1-2grams + channel/product/warranty (CHOSEN)",KEPT,0.84,0.783,0.943,best calibrated; fast; explainable
+7. Linear SVM,dropped,0.841,0.789,0.95,"same accuracy within noise; gives no probabilities, so no triage threshold"
+8a. LR C=1,dropped,0.837,0.807,0.944,
+8b. LR C=20,dropped,0.839,0.774,0.94,
+9. LR + character n-grams,dropped,0.847,0.786,0.951,"+0.7pp is inside the noise (+/-0.8pp on 2,135 rows); slower, bigger model, no real gain"
+10. exact-text lookup (memorise train),dropped,0.307,0.357,,"only 11% of hold-out texts were seen before (order numbers, wording): memorising does not work"
+11. LLM zero-shot / few-shot (hosted API),NOT RUN,,,,"no per-request spend (finance condition); remaining errors are texts with no routing information, which a bigger model cannot recover"
+"evidence: on the 15% lowest-confidence texts, model / bot / memoriser accuracy",,0.252,0.252,0.223,all three near chance (1 in 7 = 0.14): the words are not there

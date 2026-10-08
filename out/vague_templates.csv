@@ -1,0 +1,7 @@
+opening_phrase,n_train,most_common_team,its_share,teams_with_over_10pct,bot_correct
+someone contact me about,186,Repairs,0.19,7,0.18
+call back regarding / call me about,174,Repairs,0.21,5,0.21
+complaint about,183,Repairs,0.2,6,0.2
+need help with my,174,Repairs,0.28,5,0.26
+service request for,173,Repairs,0.19,6,0.16
+<product> problem,169,Repairs,0.27,7,0.21

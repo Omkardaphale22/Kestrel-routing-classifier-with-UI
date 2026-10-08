@@ -1,0 +1,8 @@
+team,precision,recall,f1,n
+Billing,0.881,0.875,0.878,255
+Filters & Consumables,0.837,0.821,0.829,207
+Installs & Demo,0.833,0.826,0.829,321
+Product Advice,0.838,0.807,0.822,269
+Repairs,0.828,0.892,0.859,498
+Returns & Replacement,0.86,0.813,0.836,326
+Warranty Claims,0.81,0.807,0.809,259
